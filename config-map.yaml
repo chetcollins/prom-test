@@ -112,11 +112,4 @@ data:
           action: replace
           target_label: kubernetes_name
 
-      - job_name: 'cntd-vpp'
-        metrics_path: /metrics
-        static_configs:
-        - targets:
-          - 192.168.0.169:9191
-          - 192.168.0.171:9191
-
 
