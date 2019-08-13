@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vpp-export
+  annotations:
+      prometheus.io/scrape: 'true'
+      prometheus.io/port:   '9482'
+
+spec:
+  ports:
+    - port: 9482
+      protocol: TCP
+  selector:
+    app: NGV-EP
